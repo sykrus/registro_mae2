@@ -1,0 +1,169 @@
+.breadcumb-menu {
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  position: relative;
+
+  li {
+    display: inline-block;
+    list-style: none;
+    position: relative;
+
+    &:after {
+      content: '\f105';
+      font-family: $icon-font;
+      font-weight: 400;
+      vertical-align: middle;
+      position: relative;
+      top: -1px;
+      margin-left: 20px;
+      margin-right: 18px;
+    }
+
+    &:last-child {
+      &:after {
+        display: none;
+      }
+
+    }
+  }
+
+  li,
+  a,
+  span {
+    word-break: break-word;
+    white-space: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: $white-color;
+    font-family: $title-font;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .fa-home-lg {
+    margin-right: 10px;
+  }
+
+  a:hover {
+    color: $theme-color;
+  }
+}
+
+.breadcumb-menu-wrap {
+  min-height: 30px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.breadcumb-title {
+  color: $white-color;
+  margin: -0.1em 0 -0.1em 0;
+  font-size: 70px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.breadcumb-subtitle {
+  color: $white-color;
+  text-transform: uppercase;
+  font-size: 18px;
+  letter-spacing: 0.2em;
+  display: block;
+  margin-bottom: 0;
+}
+
+.breadcumb-content {
+  padding: 128px 0 90px 0;
+}
+
+.breadcumb-wrapper {
+  padding-bottom: 0.1px;
+  overflow: hidden;
+  position: relative;
+  background-color: $secondary-color;
+  background-size: contain;
+
+  @include hd {
+    background-size: cover;
+    background-position: center top;
+  }
+}
+
+@media (max-width: 1850px) {
+  .breadcumb-wrapper {
+    background-size: cover;
+    background-position: center center;
+  }
+}
+
+
+@include xl {
+  .breadcumb-title {
+    font-size: 60px;
+  }
+}
+
+@include ml {
+  .breadcumb-title {
+    font-size: 48px;
+  }
+
+  .breadcumb-subtitle {
+    font-size: 18px;
+    letter-spacing: 0.01em;
+    margin-top: 10px;
+  }
+}
+
+@include lg {
+  .breadcumb-title {
+    font-size: 40px;
+  }
+}
+
+@include md {
+  .breadcumb-wrapper {
+    text-align: center;
+    background-position: left center;
+  }
+
+  .breadcumb-content {
+    padding: 88px 0 30px 0;
+  }
+
+  .breadcumb-menu-wrap {
+    justify-content: center;
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .breadcumb-menu {
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 7px 7px 0 0;
+
+    &:after {
+      display: none;
+    }
+  }
+
+  .breadcumb-title {
+    font-size: 36px;
+  }
+}
+
+@include sm {
+  .breadcumb-title {
+    font-size: 32px;
+  }
+
+  .breadcumb-subtitle {
+    letter-spacing: 0;
+    font-size: 16px;
+  }
+}

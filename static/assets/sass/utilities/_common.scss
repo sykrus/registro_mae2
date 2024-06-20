@@ -1,0 +1,105 @@
+.image-scale-hover {
+  overflow: hidden;
+
+  img {
+    transition: all ease 0.4s;
+    transform: scale(1.001);
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.2);
+    }
+  }
+}
+
+
+
+.z-index-step1 {
+  position: relative;
+  z-index: 4 !important;
+}
+
+.z-index-common {
+  position: relative;
+  z-index: 3;
+}
+
+.z-index-n1 {
+  z-index: -1;
+}
+
+
+.media-body {
+  flex: 1;
+}
+
+.badge {
+  position: absolute;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: inline-block;
+  text-align: center;
+  background-color: $theme-color;
+  color: $white-color;
+  padding: .35em .55em;
+  border-radius: 50%;
+}
+
+.sec-wrap1 {
+  position: relative;
+  padding-bottom: 235px;
+  padding-top: 29px;
+}
+
+.sec-wrap3-1.background-image {
+  background-position: bottom left;
+}
+
+.body-shape1 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 200px;
+  background-color: $theme-color;
+  -webkit-clip-path: url(#body-clip1);
+  clip-path: url(#body-clip1);
+}
+
+
+
+.svg-hidden {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+
+@media (min-width: $hd) {
+  .d-hd-none {
+    display: none !important;
+  }
+}
+
+@include ml {
+  .sec-wrap1 {
+    padding-bottom: 140px;
+  }
+
+  .body-shape1 {
+    height: 130px;
+  }
+}
+
+@include md {
+  .sec-wrap1 {
+    padding-bottom: 80px;
+  }
+
+  .body-shape1 {
+    height: 80px;
+  }
+}

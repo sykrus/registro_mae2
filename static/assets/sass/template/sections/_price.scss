@@ -1,0 +1,147 @@
+.package-style1 {
+  position: relative;
+  border: 3px solid $secondary-color;
+  text-align: center;
+  padding-bottom: 45px;
+  margin-bottom: 30px;
+  background-color: $body-bg;
+  transition: all ease 0.4s;
+  
+  .package-top {
+    background-color: $secondary-color;
+    padding: 40px 0 13px 0;
+    margin-bottom: 86px;
+    position: relative;
+    transition: all ease 0.4s;
+  } 
+  
+  .package-shape {
+    position: absolute;
+    right: -3px;
+    top: 99%;
+    background-color: $secondary-color;
+    clip-path: url(#priceoneclip);
+    height: 93px;
+    left: 0;
+    transition: all ease 0.4s;
+  }
+
+  .package-name {
+    color: $white-color;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  .package-price {
+    font-size: 75px;
+    font-weight: 700;
+    line-height: 1;
+    color: $white-color;
+    margin-bottom: 5px;
+
+    .currency {
+      font-size: 40px;
+      font-weight: 400;
+      vertical-align: top;
+      position: relative;
+      top: 0.15em;
+    }
+  }
+
+  .package-duration {
+    color: $white-color;
+    font-weight: 500;
+    font-size: 18px;
+    display: block;
+  }
+
+  .package-list {
+    margin-bottom: 33px;
+    padding: 0 40px;
+    
+    li {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1;
+      border-bottom: 1px solid $border-color;
+      padding: 0 0 17px 0;
+      margin: 0 0 15px 0;
+      color: $title-color;
+
+      &:last-child {
+        padding-bottom: 0;
+        margin-bottom: 0;
+        border-bottom: none;
+      }
+    }
+  }
+
+  &.active,
+  &:hover {
+    border-color: $theme-color;
+
+    .package-shape,
+    .package-top {
+      background-color: $theme-color;
+    }
+  }
+  
+}
+
+.package-zigzag {
+  &:nth-child(odd) {
+    margin-top: 60px;
+  }
+}
+
+@include lg {
+  .package-zigzag {
+    &:nth-child(odd) {
+      margin-top: 40px;
+    }
+  }
+  
+  .package-style1 {
+    .package-top {
+      padding: 30px 0 13px 0;
+      margin-bottom: 40px;
+    }
+
+    .package-shape {
+      height: 45px;
+    }
+
+    .package-price {
+      font-size: 50px;
+
+      .currency {
+        font-size: 26px;
+        top: 7px;
+        margin-right: 3px;
+      }
+    }
+
+    .package-name {
+      font-size: 16px;
+      margin: 0 0 5px 0;
+    }
+
+    .package-list {
+      li {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+
+@include md {
+  .package-zigzag {
+    &:nth-child(odd) {
+      margin-top: 0;
+    }
+  }
+}

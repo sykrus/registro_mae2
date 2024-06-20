@@ -1,0 +1,97 @@
+.testi-style1 {
+  background-color: $theme-color;
+  text-align: center;
+  padding: 80px 100px 150px 100px;
+  width: 100%;
+  max-width: 610px;
+  clip-path: url(#testi-clip2);
+  margin-bottom: 30px;
+
+  .testi-quote {
+    margin-bottom: 32px;
+  }
+
+  .testi-text {
+    color: $white-color;
+    font-size: 24px;
+    line-height: 40px;
+    margin-bottom: 22px;
+  }
+
+  .testi-name {
+    text-transform: uppercase;
+    color: $white-color;
+    margin-bottom: 3px;
+  }
+
+  .testi-degi {
+    text-transform: uppercase;
+    font-weight: 700;
+    display: block;
+    color: $white-color;
+    margin-bottom: 15px;
+  }
+
+  .testi-rating {
+    line-height: 1;
+    
+    i {
+      color: $yellow-color;
+      font-size: 14px;
+      margin: 0 3px;
+    }
+  }
+}
+
+@include lg {
+  .testi-style1 {
+    padding: 40px 40px 120px 40px;
+    max-width: 510px;
+
+    .testi-text {
+      font-size: 20px;
+      line-height: 32px;
+      margin-bottom: 17px;
+    }
+
+    .testi-name {
+      margin-bottom: 3px;
+      font-size: 30px;
+    }
+
+    .testi-degi {
+      margin-bottom: 10px;
+    }
+
+    .testi-rating i {
+      font-size: 14px;
+      margin: 0 1px;
+    }
+  }
+}
+
+@include md {
+  .testi-style1 {
+    padding: 40px 30px 100px 30px;
+    max-width: 100%;
+
+    .testi-quote {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+@include sm {
+  .testi-style1 {
+    padding: 40px 20px 100px 20px;
+
+    .testi-name {
+      margin-bottom: 3px;
+      font-size: 26px;
+    }
+
+    .testi-text {
+      font-size: 18px;
+    }
+  }
+}

@@ -1,0 +1,262 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Mi Proyecto Django{% endblock %}</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <!-- Fontawesome Icon -->
+    <link rel="stylesheet" href="{% static 'assets/css/fontawesome.min.css' %}">
+    <!-- Layerslider -->
+    <link rel="stylesheet" href="{% static 'assets/css/layerslider.min.css' %}">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="{% static 'assets/css/magnific-popup.min.css' %}">
+    <!-- Slick Slider -->
+    <link rel="stylesheet" href="{% static 'assets/css/slick.min.css' %}">
+    <!-- Theme Custom CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+</head>
+<body>
+
+    <div class="preloader  ">
+        <button class="vs-btn preloaderCls">Cancel Preloader </button>
+        <div class="preloader-inner">
+            <div class="loader-logo"><img src="{% static 'assets/img/logo-loader.svg' %}" alt="logo"></div>
+            <div class="spinner"></div>
+        </div>
+      </div>
+
+
+      <div class="vs-menu-wrapper">
+        <div class="vs-menu-area text-center">
+            <button class="vs-menu-toggle"><i class="fal fa-times"></i></button>
+            <div class="mobile-logo">
+                <a href="index.html">
+                    <img src="assets/img/logo.svg" alt="logo"> </a>
+            </div>
+            <div class="vs-mobile-menu">
+                <ul>
+               
+                    <li>
+                        <a href="about.html">About Us</a>
+                    </li>
+                 
+                
+                
+                    <li>
+                        <a href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+  
+
+    <header class="vs-header header-layout1">
+        <div class="container">
+            <div class="row gx-0">
+                <div class="col-auto align-self-stretch d-none d-lg-block">
+                    <div class="header-logo">
+                        <a href="index.html">
+                            <img src="assets/img/logo.svg" alt="logo"> </a>
+                    </div>
+                </div>
+                <div class="col align-self-center">
+                    <!-- Header Top -->
+                    <div class="header-top">
+                        <div class="row gx-0 justify-content-between align-items-center">
+                            <div class="col-lg-auto">
+                                <div class="header-links">
+                                    <ul>
+                                        <li><a href="tel:+02073885619"><i class="fas fa-phone-alt"></i></a> Phone: <a href="tel:+02073885619">020 7388 5619</a></li>
+                                        <li><a href="mailto:contact@example.com"><i class="fas fa-envelope"></i></a> Email: <a href="mailto:contact@example.com">contact@example.com</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-auto d-none d-lg-block">
+                                <div class="header-social">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-area">
+                        <div class="row gx-0">
+                            <div class="col text-end text-xl-center text-xxl-start">
+                                <nav class="main-menu menu-style1 d-none d-lg-block">
+                                    <ul>
+                                   
+                                        <li>
+                                            <a href="about.html">About Us</a>
+                                        </li>
+                                   
+                                       
+                                        <li>
+                                            <a href="contact.html">Contact</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="col-auto d-none d-xl-block">
+                                <div class="header-icons">
+                                    <a href="cart.html" class="cart-icon"><i class="far fa-shopping-bag"></i></a>
+                                    <button class="sideMenuToggler"><i class="fal fa-bars"></i></button>
+                                </div>
+                            </div>
+                            <div class="col-auto d-none d-xxl-block">
+                                <a href="match-details.html" class="header-strem-btn">Live Streaming</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-between align-items-center d-flex d-lg-none">
+                <div class="col-auto">
+                    <div class="header-logo">
+                        <a href="index.html">
+                            <img src="assets/img/logo-2.svg" alt="logo"> </a>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <button class="vs-menu-toggle"><i class="fal fa-bars"></i></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="breadcumb-wrapper " data-bg-src="{% static 'assets/img/breadcumb/breadcumb-bg.jpg' %}">
+        <div class="container z-index-common">
+            <div class="breadcumb-content">
+                <h1 class="breadcumb-title">Contact Us</h1>
+                <p class="breadcumb-subtitle">Cover all esports & gamers needs</p>
+            </div>
+            <div class="breadcumb-menu-wrap">
+                <ul class="breadcumb-menu">
+                    <li><a href="index.html"><i class="fas fa-home-lg"></i>Home</a></li>
+                    <li>Contact Us</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div data-bg-src="{% static 'assets/img/bg/contact-p-bg-1-1.png' %}">
+
+   
+
+
+    <div class="container mt-5">
+        <h1>Registrar Equipo</h1>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-group">
+                {{ form.nombre.label_tag }}
+                {{ form.nombre }}
+            </div>
+            <div class="form-group">
+                {{ form.logo.label_tag }}
+                {{ form.logo }}
+            </div>
+
+            <h2>Participantes</h2>
+            <div id="participantes-formset">
+                {{ formset.management_form }}
+                {% for form in formset %}
+                    <div class="form-row mb-3">
+                        {{ form.id }}
+                        <div class="col">
+                            {{ form.nombre.label_tag }}
+                            {{ form.nombre }}
+                        </div>
+                        <div class="col">
+                            {{ form.email.label_tag }}
+                            {{ form.email }}
+                        </div>
+                        <div class="col">
+                            {{ form.nickname.label_tag }}
+                            {{ form.nickname }}
+                        </div>
+                        <div class="col-1">
+                            {% if form.instance.pk %}
+                                <button type="button" class="btn btn-danger remove-participant">Eliminar</button>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <button type="button" class="btn btn-secondary" id="add-participant">Añadir Participante</button>
+            <br><br>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </form>
+    </div>
+
+   <!-- Jquery -->
+   <script src="{% static 'assets/js/vendor/jquery-3.6.0.min.js' %}"></script>
+   <!-- Slick Slider -->
+   <script src="{% static 'assets/js/slick.min.js' %}"></script>
+   <!-- Layerslider -->
+   <script src="{% static 'assets/js/layerslider.utils.js' %}"></script>
+   <script src="{% static 'assets/js/layerslider.transitions.js' %}"></script>
+   <script src="{% static 'assets/js/layerslider.kreaturamedia.jquery.js' %}"></script>
+   <!-- Bootstrap -->
+   <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+   <!-- Magnific Popup -->
+   <script src="{% static 'assets/js/jquery.magnific-popup.min.js' %}"></script>
+   <!-- Isotope Filter -->
+   <script src="{% static 'assets/js/imagesloaded.pkgd.min.js' %}"></script>
+   <script src="{% static 'assets/js/isotope.pkgd.min.js' %}"></script>
+   <!-- Wow.js -->
+   <script src="{% static 'assets/js/wow.min.js' %}"></script>
+   <!-- Main Js File -->
+   <script src="{% static 'assets/js/main.js' %}"></script>
+
+    <script>
+        $(document).ready(function() {
+            var form_idx = {{ formset.total_form_count }};
+            $('#add-participant').click(function() {
+                if (form_idx < {{ formset.max_num }}){
+                    var newForm = $('#empty-form').html().replace(/__prefix__/g, form_idx);
+                    $('#participantes-formset').append(newForm);
+                    form_idx++;
+                    // Actualizar el valor de 'participantes-TOTAL_FORMS'
+                    $('#id_participantes-TOTAL_FORMS').val(form_idx);
+                } else {
+                    alert('No puedes añadir más de 7 participantes.');
+                }
+            });
+
+            $('#participantes-formset').on('click', '.remove-participant', function() {
+                $(this).closest('.form-row').remove();
+                form_idx--;
+                // Actualizar el valor de 'participantes-TOTAL_FORMS' al eliminar un participante
+                $('#id_participantes-TOTAL_FORMS').val(form_idx);
+            });
+        });
+    </script>
+
+    <script type="text/html" id="empty-form">
+        <h1>Suplente</h1>
+        <div class="form-row mb-3">
+            <div class="col">
+    
+                <input type="hidden" name="participantes-__prefix__-id" id="id_participantes-__prefix__-id">Nombre
+                <input type="text" name="participantes-__prefix__-nombre" id="id_participantes-__prefix__-nombre">
+            </div>
+            <div class="col">
+                Email
+                <input type="email" name="participantes-__prefix__-email" id="id_participantes-__prefix__-email">
+            </div>
+            <div class="col">
+                Apodo
+                <input type="text" name="participantes-__prefix__-nickname" id="id_participantes-__prefix__-nickname">
+            </div>
+            <div class="col-1">
+                <button type="button" class="btn btn-danger remove-participant">Eliminar</button>
+            </div>
+        </div>
+    </script>
+</body>
+</html>

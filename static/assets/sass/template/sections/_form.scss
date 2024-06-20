@@ -1,0 +1,220 @@
+.form-style1 {
+  textarea,
+  input,
+  select {
+    height: 75px;
+    border: 2px solid #d4d4e0;
+    color: $white-color;
+    font-weight: 600;
+    background-color: transparent;
+
+    @include inputPlaceholder {
+      color: $white-color;
+    }
+    
+    &:focus {
+      color: #000;
+      background-color: $white-color;
+      border-color: transparent;
+
+      @include inputPlaceholder {
+        color: #000;
+      }
+    }
+  }
+
+  select {
+    &:not(:focus) {
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3E%3C/svg%3E");
+    }
+  }
+
+  textarea {
+    min-height: 170px;
+    padding-right: 30px;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .row {
+    --bs-gutter-x: 20px;
+  }
+
+}
+
+.form-shape1 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: $theme-color;
+  max-width: 934px;
+  clip-path: url(#form-clip1);
+}
+
+.form-style2 {
+  input {
+    font-size: 18px;
+    height: 70px;
+    padding-left: 30px;
+    color: #404040;
+    background-color: transparent;
+    border: none;
+    flex: 1;
+
+    @include inputPlaceholder {
+      color: #404040;
+    }
+  }
+
+  .form-group {
+    padding: 10px;
+    margin-bottom: 0;
+    background-color: #fff;
+    display: flex;
+  }
+}
+
+.form-wrap1 {
+  background-color: $theme-color;
+  padding: 60px;
+
+  .sec-title {
+    color: $white-color;
+    font-size: 48px;
+    margin: -0.30em 0 3px 0;
+  }
+
+  .form-text {
+    font-size: 18px;
+    line-height: 30px;
+    max-width: 460px;
+    margin-bottom: -0.25em;
+    color: $white-color;
+  }
+
+  .form-group {
+    width: 640px;
+    max-width: 100%;
+  }
+}
+
+.form-style3 {
+  padding-right: 45px;
+
+  input,
+  textarea,
+  select {
+    font-size: 18px;
+    height: 70px;
+    padding-left: 35px;
+  }
+
+  .form-group {
+    line-height: 1;
+  }
+
+  textarea {
+    padding-top: 25px;
+    min-height: 210px;
+  }
+}
+
+@include hd {
+  .form-shape1 {
+    max-width: 50%;
+  }
+}
+
+@include xl {
+  .form-shape1 {
+    max-width: 48%;
+  }
+}
+
+@include ml {
+  .form-wrap1 {
+    text-align: center;
+    
+    .form-group {
+      width: 100%;
+      margin-top: 40px;
+    }
+
+    .form-text {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 600px;
+    }
+  }
+}
+
+@include lg {
+  .form-wrap1 .sec-title {
+    font-size: 42px;
+  }
+
+  .form-style3 {
+    padding-right: 0;
+  }
+}
+
+@include md {
+  .form-wrap1 {
+    padding: 40px 20px;
+
+    .sec-title {
+      font-size: 36px;
+    }
+  }
+}
+
+@include sm {
+  .form-style2 {
+    .form-group {
+      display: block;
+      background-color: transparent;
+      padding: 0;
+    }
+
+    input {
+      background-color: $white-color;
+      margin-bottom: 15px;
+      height: 60px;
+      padding: 0 30px 0 30px;
+      font-size: 16px;
+    }
+  }
+
+  .form-wrap1 {
+    padding: 40px 15px;
+
+    .sec-title {
+      font-size: 32px;
+    }
+
+    .vs-btn {
+      background-color: $white-color;
+      color: $black-color;
+    }
+  }
+
+  .form-style3 {
+    input,
+    textarea,
+    select {
+      font-size: 16px;
+      height: 60px;
+      padding-left: 20px;
+    }
+  }
+}
+
+@include dark {
+  .form-style3 {
+    --border-color: #939393;
+  }
+}

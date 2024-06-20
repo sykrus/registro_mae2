@@ -1,0 +1,139 @@
+.widget_nav_menu,
+.widget_pages,
+.widget_archive,
+.widget_categories {
+
+  ul {
+    list-style: none;
+    margin: 0 0 -10px 0;
+    padding: 0;
+  }
+
+  a {
+    display: block;
+    background-color: $smoke-color;
+    padding: 22px 60px 20px 30px;
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1;
+    color: $title-color;
+    border-radius: 0;
+  }
+
+  li {
+    display: block;
+    position: relative;
+
+    >span {
+      width: 40px;
+      height: 40px;
+      line-height: 35.5px;
+      font-size: 18px;
+      font-weight: 500;
+      color: $title-color;
+      background-color: transparent;
+      right: 10px;
+      top: 10px;
+      z-index: 1;
+      display: inline-block;
+      text-align: center;
+      position: absolute;
+      border: 2px solid $theme-color;
+      transition: all ease 0.4s;
+      border-radius: 0;
+    }
+
+    &:hover {
+      >span {
+        background-color: $theme-color;
+        color: $white-color;
+      }
+    }
+  }
+
+  .children {
+    margin-left: 10px;
+  }
+}
+
+.widget_meta {
+  ul {
+    margin: -0.5em 0 -10px 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  li {
+    border-bottom: 1px solid $border-color;
+    padding-bottom: 11px;
+    margin-bottom: 12px;
+
+    &:last-child {
+      padding-bottom: 0;
+      margin-bottom: 0;
+      border-bottom: none;
+    }
+  }
+
+  a {
+    font-size: 16px;
+    font-weight: 500;
+    color: $title-color;
+    position: relative;
+
+    &:hover {
+      color: $theme-color;
+    }
+  }
+}
+
+.widget_nav_menu {
+  .sub-menu {
+    margin-left: 10px;
+  }
+}
+
+.wp-block-archives {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+
+  a:not(:hover) {
+    color: inherit;
+  }
+}
+
+.vs-blog ul.wp-block-archives li {
+  margin: 5px 0;
+}
+
+
+
+@include lg {
+
+  .widget_nav_menu,
+  .widget_pages,
+  .widget_archive,
+  .widget_categories {
+    padding: 18px 50px 18px 20px;
+    font-size: 14px;
+
+    a {
+      padding: 18px 50px 18px 20px;
+      font-size: 14px;
+    }
+
+    li {
+      >span {
+        top: 0;
+        right: 0;
+        width: 50px;
+        height: 50px;
+        line-height: 47px;
+        font-size: 14px;
+      }
+    }
+  }
+}

@@ -1,0 +1,111 @@
+.cta-wrap1 {
+  padding-top: 320px;
+  padding-bottom: 95px;
+  position: relative;
+  overflow: hidden;
+
+  .cta-shape1 {
+    position: absolute;
+    left: 0;
+    right: -40px;
+    top: 0;
+    height: 100%;
+    z-index: -1;
+    -webkit-clip-path: url(#cta-clip1);
+    clip-path: url(#cta-clip1);
+  }
+}
+
+
+.cta-text1 {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 50px;
+}
+
+
+.cta-about1 {
+  padding: 60px 0 60px 80px;
+
+  .cta-title {
+    margin: -0.25em 0 10px 0;
+  }
+
+  .cta-text {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+}
+
+.cta-wrap2 {
+  margin-top: -175px;
+  position: relative;
+  z-index: 1;
+}
+
+@include xl {
+  .cta-wrap1 {
+    padding-top: 250px;
+    padding-bottom: 80px;
+  }
+
+  .cta-text1 {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+}
+
+@include ml {
+  .cta-about1 {
+    padding: 25px 0 25px 40px;
+
+    .cta-title {
+      font-size: 40px;
+    }
+
+    .cta-text {
+      font-size: 16px;
+    }
+  }
+}
+
+@include lg {
+  .cta-about1 {
+    .cta-title {
+      font-size: 30px;
+    }
+  }
+
+  .cta-wrap2 {
+    margin-top: 0;
+    padding-top: $space-mobile;
+  }
+}
+
+@include md {
+  .cta-wrap1 {
+    padding-top: 160px;
+    padding-bottom: 50px;
+  }
+
+  .cta-about1 {
+    padding: 35px 20px 35px 20px;
+  }
+}
+
+@include sm {
+  .cta-wrap1 {
+    padding-top: $space-mobile;
+    padding-bottom: $space-mobile;
+
+    .cta-shape1 {
+      right: 0;
+      clip-path: none;
+    }
+  }
+
+  .cta-text1 {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+}

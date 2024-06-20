@@ -1,0 +1,157 @@
+.sec-title2,
+.sec-title {
+  font-size: 60px;
+  margin: -0.33em 0 17px 0;
+  text-transform: uppercase;
+}
+
+.sec-title2 {
+  text-transform: none;
+}
+
+.sec-subtitle {
+  font-size: 18px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $title-color;
+  font-weight: 700;
+  display: block;
+  margin: -0.4em 0 27px 0;
+}
+
+.title-area {
+  margin-bottom: calc(var(--section-title-space) - 22px);
+}
+
+.sec-line {
+  display: inline-block;
+  height: 22px;
+  width: 152px;
+  background-color: $theme-color;
+  clip-path: path("M 90.552 11.123 L 152 22 L 76.112 22 L 75.888 22 L 0 22 L 61.448 11.123 L 57.521 4.449 L 75.801 0.095 L 75.801 0 L 76 0.047 L 76.199 0 L 76.199 0.095 L 94.479 4.449 L 90.552 11.123 Z");
+  margin-bottom: 13px;
+}
+
+.sec-btns {
+  margin-bottom: var(--section-title-space);
+
+  .icon-btn {
+    margin-right: 5px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.sec-bottom-btns {
+  margin-top: 40px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.vs-carousel {
+  +.sec-bottom-btns {
+    margin-top: 10px;
+  }
+}
+
+.review-form .comment-respond .blog-inner-title,
+.woocommerce-Reviews-title,
+.sec-subtitle3,
+.sec-subtitle2 {
+  font-size: 18px;
+  position: relative;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-family: $title-font;
+  color: $title-color;
+  padding: 0 0 9px 0;
+  margin: 0 0 33px 0;
+  
+  &:before {
+    content: '';
+    width: 46px;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: $theme-color;
+    display: inline-block;
+  }
+}
+
+.review-form .comment-respond .blog-inner-title,
+.woocommerce-Reviews-title,
+.sec-subtitle3 {
+  font-size: 30px;
+  padding: 0 0 12px 0;
+  margin: -0.1em 0 33px 0;
+  letter-spacing: 0;
+}
+
+
+@include ml {
+  .sec-title2,
+  .sec-title {
+    font-size: 48px;
+  }
+}
+
+
+@include lg {
+  .sec-title2,
+  .sec-title {
+    font-size: 42px;
+  }
+
+  .sec-bottom-btns {
+    margin-top: 30px;
+  }
+}
+
+
+@include md {
+  .review-form .comment-respond .blog-inner-title,
+  .woocommerce-Reviews-title,
+  .sec-subtitle3 {
+    font-size: 26px;
+  }
+  
+  .sec-title2,
+  .sec-title {
+    font-size: 36px;
+  }
+
+  .sec-subtitle {
+    font-size: 16px;
+    margin-bottom: 17px;
+  }
+
+  .sec-bottom-btns {
+    margin-top: 10px;
+  }
+
+  .sec-btns {
+    margin-bottom: 30px;
+  }
+
+}
+
+@include sm {
+  .sec-title2,
+  .sec-title {
+    font-size: 30px;
+  }
+
+  .sec-subtitle {
+    letter-spacing: 0;
+  }
+
+  .review-form .comment-respond .blog-inner-title,
+  .woocommerce-Reviews-title,
+  .sec-subtitle3 {
+    font-size: 22px;
+  }
+}

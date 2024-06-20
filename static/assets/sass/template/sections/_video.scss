@@ -1,0 +1,172 @@
+.video-style1 {
+  position: relative;
+  margin-bottom: 30px;
+
+  .video-title {
+    color: $white-color;
+    font-size: 18px;
+    font-weight: 700;
+    display: inline-block;
+    color: $white-color;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    top: 37px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+
+    i {
+      margin-right: 7px;
+    }
+  }
+
+  .video-shape {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .video-img {
+    padding: 63px 36px;
+    
+    img {
+      width: 100%;
+    }
+  }
+
+  .play-btn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 17px;
+  }
+}
+
+.video-nav1 {
+  margin-top: -15px;
+  margin-bottom: 30px;
+
+  .thumb {
+    text-align: center;
+    transition: all ease 0.4s;
+    padding: 6px 6px 0 6px;
+    background-color: transparent;
+    position: relative;
+    margin-top: 15px;
+    cursor: pointer;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: -15px;
+      width: 57px;
+      height: 15px;
+      background-color: transparent;
+      z-index: 1;
+      transform: translateX(-50%);
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+      transition: all ease 0.4s;
+    }
+  }
+
+  img {
+    width: 100%;
+    transform: scale(1);
+  }
+
+  .title {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1;
+    display: block;
+    padding: 14px 10px;
+    background-color: transparent;
+    color: $title-color;
+    transition: all ease 0.4s;
+  }
+
+  .slick-current {
+    .thumb {
+      background-color: $theme-color;
+
+      &:before {
+        background-color: $theme-color;
+      }
+    }
+
+    .title {
+      color: $white-color;
+    }
+  }
+}
+
+@include lg {
+  .video-style1 {
+    .video-title {
+      font-size: 18px;
+      top: 42px;
+    }
+  }
+}
+
+@include md {
+  .video-style1 {
+    .video-title {
+      top: 30px;
+    }
+  }
+}
+
+@include md {
+  .video-style1 {
+    .video-title {
+      top: 40px;
+    }
+  }
+
+  .video-nav1 {
+    .thumb {
+      &:before {
+        top: -13px;
+      }
+    }
+  }
+
+  .video-style1 {
+    .video-title {
+      top: 27px;
+      letter-spacing: 0;
+    }
+  }
+}
+
+@include sm {
+  .video-style1 {
+    margin-bottom: 45px;
+    
+    .video-img {
+      padding: 30px 17px;
+    }
+
+    .play-btn {
+      bottom: 0;
+    }
+
+    .video-title {
+      display: none;
+    }
+  }
+
+  .video-nav1 {
+    --bs-gutter-x: 10px;
+  }
+}

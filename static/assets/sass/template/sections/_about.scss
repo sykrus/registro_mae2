@@ -1,0 +1,145 @@
+.list-style1 {
+  ul {
+    margin: 0 0 40px 0;
+  }
+
+  li {
+    position: relative;
+    margin-bottom: 9px;
+    padding-left: 27px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 9px;
+      width: 12px;
+      height: 12px;
+      background-color: $theme-color;
+    }
+  }
+}
+
+.list-style2 {
+  ul {
+    margin: 0 0 0 30px 0;
+  }
+
+  li {
+    font-weight: 500;
+    color: $title-color;
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 40px;
+
+    >img {
+      position: absolute;
+      left: 0;
+      top: 1px;
+    }
+  }
+
+  &.layout2 {
+    li {
+      font-weight: 400;
+    }
+  }
+}
+
+
+.about-box1 {
+  margin-bottom: 30px;
+
+  .about-text {
+    max-width: 260px;
+    font-size: 18px;
+  }
+
+  .list-style2 {
+    margin-top: 8px;
+  }
+}
+
+.img-box1 {
+  margin: 0 -190px 30px -75px;
+}
+
+.img-box2 {
+  position: relative;
+  margin: -20px 0 30px 0;
+  padding: 0 0 200px 0;
+
+  .img-2 {
+    position: absolute;
+    left: -95px;
+    top: 0;
+  }
+}
+
+.img-box3 {
+  margin: 100px 0 30px 0;
+  position: relative;
+}
+
+@include xl {
+  .img-box1 {
+    margin: 0 0 40px 0;
+  }
+
+  .about-box1 {
+    .about-text {
+      max-width: 100%;
+    }
+
+    .list-style2 {
+      margin-top: 0;
+      margin-bottom: 30px;
+    }
+  }
+
+  .img-box2 {
+    margin: 0 0 30px 0;
+    padding-bottom: 130px;
+    
+    .img-2 {
+      left: 0;
+    }
+  }
+}
+
+@include lg {
+  .img-box3 {
+    margin: 0 0 30px 0;
+  }
+}
+
+@include md {
+  .img-box2 {
+    margin: 0 0 30px 0;
+
+    .img-2 {
+      left: 0;
+      animation: none;
+    }
+  }
+}
+
+@include sm {
+  .about-box1 {
+    .about-text {
+      font-size: 16px;
+    }
+  }
+
+  .img-box2 {
+    padding: 0 0 200px 0;
+  }
+}
+
+@include dark {
+  .list-style1 { 
+    li {
+      color: $body-color;
+    }
+  }
+}

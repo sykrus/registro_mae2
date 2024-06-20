@@ -1,0 +1,53 @@
+.feature-style1 {
+  text-align: center;
+  padding: 0 30px 0 30px;
+  margin-bottom: 23px;
+  
+  .feature-icon {
+    width: var(--icon-size, 140px); 
+    height: var(--icon-size, 140px); 
+    line-height: var(--icon-size, 140px); 
+    background-color: $secondary-color;
+    text-align: center;
+    border-radius: 50%;
+    transition: all ease 0.4s;
+    margin: 0 auto 28px auto;
+  }
+
+  .feature-title {
+    margin-bottom: 11px;
+  }
+
+  .feature-text {
+    margin: 0;
+  }
+
+  &:hover {
+    .feature-icon {
+      background-color: $theme-color;
+    }
+  }
+}
+
+@include lg {
+  .feature-style1 {
+    padding: 0;
+    --icon-size: 100px;
+
+    .feature-icon {
+      img {
+        max-width: 50%;
+      }
+    }
+  }
+}
+
+@include dark {
+  .feature-style1 {
+    &:not(:hover) {
+      .feature-icon {
+        background-color: #2F2C43;
+      }
+    }
+  }
+}

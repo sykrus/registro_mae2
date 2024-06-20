@@ -1,0 +1,506 @@
+.team-nav1 {
+  margin-bottom: 30px;
+
+  .team-name {
+    display: block;
+    background-color: $secondary-color;
+    color: $white-color;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    line-height: 1;
+    margin: -26px 20px 0 20px;
+    padding: 12px 10px;
+    z-index: 2;
+    position: relative;
+    transition: all ease 0.4s;
+  }
+
+  .team-logo {
+    padding: 25px 0 40px 0;
+  }
+
+  .tab-btn {
+    text-align: center;
+    background-color: $smoke-color;
+    padding: 00.1px 0 0 0;
+    margin: 21px 0 30px 0;
+    position: relative;
+    border: 5px solid transparent;
+    transition: all ease 0.4s;
+    cursor: pointer;
+  }
+
+  .slick-current .tab-btn,
+  .tab-btn:hover {
+    border-color: $theme-color;
+    background-color: $body-bg;
+
+    .team-name {
+      background-color: $theme-color;
+    }
+  }
+
+  .slick-arrow {
+    background-color: transparent;
+    font-size: 26px;
+    padding: 0;
+    width: auto;
+    height: auto;
+    margin: -30px 0 0 0;
+    top: 50%;
+    color: $title-color;
+    --pos-x: -70px;
+    border: none;
+
+    &:hover {
+      color: $theme-color;
+      background-color: transparent;
+    }
+  }
+}
+
+.team-style1 {
+  .team-body {
+    background-color: $smoke-color;
+    text-align: center;
+    padding: 55px 0 0 0;
+    outline: 5px solid transparent;
+    outline-offset: -5px;
+    transition: all ease 0.4s;
+    position: relative;
+    margin-bottom: 85px;
+    z-index: 1;
+  }
+  
+  .vs-btn {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -55px;
+    height: 60px;
+    padding: 0 20px;
+    line-height: 58px;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .team-logo {
+    margin: 0 0 22px 0;
+
+    img {
+      transition: all ease 0.6s;
+      transform: rotate(0);
+    }
+  }
+
+  .team-name {
+    text-transform: uppercase;
+    margin-bottom: 19px;
+  }
+
+  .team-avaters {
+    margin-bottom: 30px;
+    
+    .avater {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 1px solid $title-color;
+      display: inline-block;
+      vertical-align: middle;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .total-avater {
+    font-size: 16px;
+    font-weight: 600;
+    color: $title-color;
+    display: inline-block;
+    padding: 0 5px;
+  }
+
+  .team-info-number {
+    font-size: 30px;
+    font-weight: 600;
+    color: $title-color;
+    display: block;
+    margin-bottom: 3px;
+  }
+
+  .team-info-label {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .team-bottom {
+    display: flex;
+    border-top: 1px solid $border-color;
+    position: relative;
+    z-index: -1;
+  }
+
+  .team-info {
+    border-left: 1px solid $border-color;
+    flex: 1;
+    padding: 24px 0 24px 0;
+
+    &:first-child {
+      border-left: none;
+    }
+  }
+
+  &.layout3,
+  &.layout2 {
+    .team-body {
+      margin-bottom: 30px;
+      background-color: $body-bg;
+      outline-color: $theme-color;
+    }
+
+    .vs-btn {
+      bottom: 0;
+      top: 0;
+      bottom: 0;
+      height: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .team-bottom {
+      position: relative;
+    }
+  }
+
+  &.layout2 {
+    &:nth-child(2n+1) {
+      --theme-color: #003E9F;
+    }
+
+    &:nth-child(2n+2) {
+      --theme-color: #F2003A;
+    }
+
+
+    &:nth-child(3n+3) {
+      --theme-color: #C3AC38;
+    }
+
+    &:nth-child(4n+4) {
+      --theme-color: #1FF2F8;
+    }
+
+    &:nth-child(5n+5) {
+      --theme-color: #4A97AB;
+    }
+
+    &:nth-child(6n+6) {
+      --theme-color: #43c84f;
+    }
+  }
+
+  &:hover {
+    .team-logo {
+      img {
+        transform: rotateY(360deg);
+      }
+    }
+  }
+
+}
+
+.team-style1:hover,
+.slick-current.team-style1 {
+  .team-body {
+    outline-color: $theme-color;
+    background-color: $body-bg;
+  }
+
+  .vs-btn {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.team-wrap1 {
+  padding-top: 1px;
+  position: relative;
+  z-index: 31;
+
+  >.container {
+    margin-top: -140px;
+  }
+}
+
+.team-box1 {
+  text-align: center;
+  margin-bottom: 25px;
+
+  .team-logo {
+    margin-bottom: 15px;
+  }
+
+  .team-name {
+    text-transform: uppercase;
+    margin: -0.1em 0 12px 0;
+  }
+
+  .team-social {
+    a {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      border-radius: 50%;
+      border: 1px solid $border-color;
+      color: $title-color;
+      margin-right: 5px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:hover {
+        background-color: $theme-color;
+        color: $white-color;
+        border-color: transparent;
+      }
+    }
+  }
+
+  .team-bottom {
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+    display: flex;
+    margin: 40px 0 0 0;
+  }
+
+  .team-info {
+    flex: 1;
+    padding: 24px 0 22px 0;
+    border-left: 1px solid $border-color;
+
+    &:first-child {
+      border-left: none;
+    }
+  }
+
+  .team-info-number {
+    font-size: 30px;
+    font-weight: 600;
+    color: $title-color;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .team-info-label {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+  }
+}
+
+.team-avater1 {
+  border: 5px solid $theme-color;
+  border-bottom: none;
+  text-align: center;
+  margin-bottom: 30px;
+
+  .team-logo {
+    width: 220px;
+    padding: 35px 0;
+  }
+
+  .team-name {
+    font-size: 18px;
+    text-transform: uppercase;
+    line-height: 1;
+    margin: 0;
+    color: $white-color;
+    background-color: $theme-color;
+    padding: 13px 10px;
+  }
+}
+
+@include xl {
+  .team-wrap1 {
+    > .container {
+      margin-top: $space-mobile;
+    }
+  }
+}
+
+@include lg {
+  .team-style1 {
+    .team-info-number {
+      font-size: 26px;
+    }
+
+    .team-info-label {
+      font-size: 14px;
+    }
+
+    .team-body {
+      padding: 40px 0 0 0;
+    }
+  }
+
+  .team-avater1 {
+    .team-logo {
+      width: 180px;
+      padding: 20px 0;
+    }
+
+    .team-name {
+      font-size: 14px;
+      padding: 10px 10px;
+    }    
+  }
+
+  .player-about1 {
+    .player-name {
+      font-size: 30px;
+    }
+
+    .player-degi {
+      font-size: 14px;
+    }
+
+    .player-info-label {
+      font-size: 14px;
+      margin: 0 0 5px 0;
+    }
+
+    .player-info-title {
+      font-size: 22px;
+    }
+
+    .player-mail {
+      font-size: 16px;
+    }
+
+    .player-infos {
+      li {
+        padding-bottom: 22px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+}
+
+
+@include md {
+  .team-style1 {
+    .team-body {
+      outline-color: $theme-color;
+      margin-bottom: 30px;
+    }
+    
+    .team-bottom {
+      flex-wrap: wrap;
+    }
+    
+    .vs-btn {
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  .team-nav1 {
+    .team-name {
+      margin: -26px 15px 0 15px;
+      font-size: 16px;
+    }
+  }
+}
+
+@include sm {
+  .team-nav1 {
+    .team-name {
+      font-size: 14px;
+      margin: -5px -5px 0 -5px;
+      padding: 11px 10px;
+    }
+  }
+
+  .team-box1 {
+    .team-info-number {
+      font-size: 20px;
+      margin-bottom: 0;
+    }
+
+    .team-info-label {
+      font-size: 14px;
+    }
+
+    .team-info {
+      padding: 18px 0 17px 0;
+    }
+  }
+
+  .team-nav1 {
+    .team-logo {
+      padding: 20px 10px 20px 10px;
+    }
+  }
+
+
+  .team-avater1 {    
+    .team-logo {
+      width: 100%;
+    }
+  }
+}
+
+@include dark {
+  .team-style1 {
+    --border-color: rgba(255, 255, 255, 0.20);
+    --smoke-color: #{$secondary-color};
+    
+    .team-info-label {
+      color: $white-color;
+    }
+
+    &.layout3 {
+      .team-body {
+        background-color: $secondary-color;
+      }
+    }
+  }
+
+  .team-style1:hover,
+  .slick-current.team-style1 {
+    &.layout3 {
+      .team-body {
+        background-color: $body-bg;
+      }
+    }
+  }
+
+  .team-box1 {
+    .team-bottom {
+      --border-color: #{rgba(#FFFFFF, 0.20)};
+    }
+  }
+
+  .team-nav1 {
+    .slick-arrow {
+      &:not(:hover) {
+        color: $white-color;
+        background-color: transparent;
+      }
+    }
+  }
+}

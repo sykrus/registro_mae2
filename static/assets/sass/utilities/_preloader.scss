@@ -1,0 +1,126 @@
+$spinner-size: 200px; // 200px
+$spinner-thickness: 4px; // 4px
+$spinner-speed: 1.2s; // 1.2s
+$spinner-3d: true; // true
+$spinner-loops: infinite; // infinite (be careful, save the batteries!)
+
+.preloader {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 999;
+  background-color: $body-bg;
+
+  .vs-btn {
+    padding: 15px 20px;
+    border-radius: 0;
+    font-size: 14px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: $black-color;
+    color: $white-color;
+    text-transform: capitalize;
+  }
+}
+
+.preloader-inner {
+  display: flex;
+  padding: 50px;
+  background: radial-gradient($secondary-color, hsl(200, 30%, 6%));
+  height: 100%;
+  overflow: hidden;
+}
+
+.loader-logo {
+  position: absolute;
+  left: 50%;
+  top: 48%;
+  transform: translate(-50%, -50%);
+  width: max-content;
+}
+
+// Spinner ----------------------------------
+.spinner {
+  position: relative;
+  margin: auto;
+  box-sizing: border-box;
+  background-clip: padding-box;
+  width: $spinner-size;
+  height: $spinner-size;
+  border-radius: $spinner-size * 0.5;
+  border: $spinner-thickness solid rgba(#F2003A, .1);
+
+  @if ($spinner-3d) {
+    // mask smoothens out the anti-aliasing artifacts in the back. 
+    -webkit-mask: linear-gradient(rgba(#F2003A, .1), rgba(#F2003A, 1) 90%);
+    transform-origin: 50% 60%;
+    transform: perspective($spinner-size) rotateX(66deg);
+    animation: spinner-wiggle $spinner-speed $spinner-loops;
+  }
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    margin: -$spinner-thickness;
+    box-sizing: inherit;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    opacity: .05;
+    border: inherit;
+    border-color: transparent;
+    animation: spinner-spin $spinner-speed cubic-bezier(.6, .2, 0, .8) $spinner-loops,
+      spinner-fade $spinner-speed linear $spinner-loops;
+  }
+
+  &:before {
+    border-top-color: rgba(#F2003A, 90%);
+  }
+
+  &:after {
+    border-top-color: rgba(#F2003A, 60%);
+    animation-delay: $spinner-speed * 0.25;
+  }
+}
+
+@keyframes spinner-wiggle {
+  30% {
+    transform: perspective($spinner-size) rotateX(66deg);
+  }
+
+  40% {
+    transform: perspective($spinner-size) rotateX(65deg);
+  }
+
+  50% {
+    transform: perspective($spinner-size) rotateX(68deg);
+  }
+
+  60% {
+    transform: perspective($spinner-size) rotateX(64deg);
+  }
+}
+
+@keyframes spinner-spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner-fade {
+  20% {
+    opacity: .1;
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  60% {
+    opacity: .1;
+  }
+}
