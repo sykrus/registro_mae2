@@ -24,7 +24,7 @@ def equipo_create(request):
                 participante.save()
             formset.save_m2m()
             messages.success(request, 'Guardado exitosamente')
-            return HttpResponseRedirect('/')
+            return render(request, 'evento/equipo_success.html')
     else:
         form = EquipoForm()
         formset = ParticipanteFormSet(queryset=Participante.objects.none())
