@@ -12,6 +12,9 @@ class Participante(models.Model):
     nombre = models.CharField(max_length=100)
     email = models.EmailField()
     nickname = models.CharField(max_length=100)
+    discord = models.CharField(max_length=100, blank=True)
+    nacionalidad = models.CharField(max_length=100, blank=True)
+    edad = models.IntegerField(blank=True, null=True)
 
     def __str__(self):
         return self.nombre

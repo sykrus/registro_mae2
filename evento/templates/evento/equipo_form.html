@@ -27,11 +27,13 @@ a {
 .card1 {
     border-bottom-left-radius: 20px;
     border-top-left-radius: 20px;
-    background-color: #512DA8;
     height: 100%;
     color: #fff;
     padding-left: 13%;
-    padding-right: 13%
+    padding-right: 13%;
+    background-image: url("{% static 'assets/img/mae/fondo.jpg' %}");
+    background-size: cover;
+    background-position: center;
 }
 
 .logo {
@@ -87,8 +89,7 @@ input {
     padding: 10px 12px 10px 12px;
     border: 1px solid lightgrey;
     border-radius: 10px;
-    margin-bottom: 25px;
-    margin-top: 2px;
+
     width: 100%;
     box-sizing: border-box;
     color: #2C3E50;
@@ -184,38 +185,16 @@ button:focus {
     border: 2px solid #fff
 }
 
-.carousel-indicators li#li1 {
-    background: url("https://i.imgur.com/IjkibdE.jpg") !important;
-    background-size: cover !important
-}
 
-.carousel-indicators li#li2 {
-    background: url("https://i.imgur.com/oW8Wpwi.jpg") !important;
-    background-size: cover !important
-}
 
-.carousel-indicators li#li3 {
-    background: url("https://i.imgur.com/EUYNvE1.jpg") !important;
-    background-size: cover !important
-}
 
-.carousel-indicators li#li4 {
-    background: url("https://i.imgur.com/ndQx2Rg.jpg") !important;
-    background-size: cover !important
-}
-
-.carousel-indicators li#li5 {
-    background: url("https://i.imgur.com/gazoShk.jpg") !important;
-    background-size: cover !important
-}
 
 .profile-pic {
-    width: 100px;
-    height: 100px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
-    position: absolute;
-    top: -50px;
-    left: calc(50% - 50px)
+
+
 }
 
 .content {
@@ -247,7 +226,7 @@ button:focus {
             <div class="col-lg-5">
                 <div class="card1 pb-5">
                     <div class="row px-3">
-                        <h5 class="logo"><u>MAE GAMING</u></h5>
+                 
                     </div>
                     <div class="row px-3 justify-content-center mt-4 mb-5">
                         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -256,33 +235,64 @@ button:focus {
                           
                           
                             </ol>
-                            <div class="carousel-inner">
+                            <div class="">
                            
                             
-                                <div class="carousel-item active card border-0 card-0">
-                                    <div class="text-center"> <img src="{% static 'assets/img/mae/logo.png' %}" class="img-fluid profile-pic"> </div>
-                                    <h4 class="font-weight-bold mt-5">First Assault</h4> <small class="mb-2">Torneo</small>
-                                    <hr width="50%">
-                                    <p class="content mt-2 mb-0">
-                                        Bienvenidos a First Assault , emocionante evento diseñado para brindar a los jugadores de todos los niveles la oportunidad de demostrar sus habilidades y competir por el título de campeón.
-                                        
-                                   </p>
+                                <div class="">
+                                    <div class="text-center"> <img src="{% static 'assets/img/mae/logo.jpg' %}" class="img-fluid profile-pic"> </div>
+                                    <div class="text-center  mt-5">
+                                 
+                                        <h4 class="font-weight-bold" style="font-size: 32px;">
+                                            !Bienvenido al primer torneo organizador por MAE para LAS!
+                                        </h4> 
 
-                                   <p class="content mt-2 mb-0">
-                                    ¡Únete a nosotros en este emocionante viaje y demuéstranos que tienes lo necesario para ser el próximo campeón del Torneo Amateur de Valorant!
+                                        
+                                        <h4 class="font-weight-bold" style="font-size: 32px;">
+                                            Este 31 de septiembre y 1 de agosto podrás competir con tu equipo por un premio de 120 USD.
+                                        </h4> 
+                                        <h4 class="font-weight-bold" style="font-size: 32px;">
+                                            Si eres de Argentina, Perú, Bolivia, Chile, Uruguay o Paraguay, puedes inscribirte GRATIS para competir.
+                                        </h4>
+                                        <h4 class="font-weight-bold" style="font-size: 32px;">
+                                            Lee los Requisitos y reglas antes de inscribirte
+                                        </h4> 
+                                            
+                                        <br>
+
+                                        <h4 class="font-weight-bold" style="font-size: 32px;">
+                                            ¿Estás listo para el duelo?
+                                        </h4>     
+                                            
                                     
-                               </p>
+
+                                    </div>
+                                   
+                                    <h4  class="font-weight-bold" style="font-size: 24px; margin-top: 80px;">
+                                            
+                                        DESCARGA AQUÍ LOS REQUISITOS Y REGLAS
+                            
+                                    </h4>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input mt-2" type="checkbox" id="aceptoCheck" style="transform: scale(2.5);">
+                                        <label class="form-check-label" for="aceptoCheck">
+                                            <h4 class="font-weight-bold" style="font-size: 24px;">
+                                                He Leído y acepto
+                                            </h4>
+                                        </label>
+                                    </div>
+                                    
+                                    <hr width="50%">
+                             
+
+                               
                                 </div>
                             
                            
                             </div>
                         </div>
                     </div>
-                    <div class="row px-3 text-center justify-content-center mb-0 social"> 
-                        <span class="fa fa-facebook-square mx-2"></span> 
-                        <span class="fa fa-twitter mx-2"></span>
-                        <span class="fa fa-instagram mx-2"></span> 
-                        <span class="fa fa-youtube-play mx-2"></span> </div>
+      
                 </div>
             </div>
       
@@ -299,60 +309,127 @@ button:focus {
 
                         <form method="post" enctype="multipart/form-data">
                             {% csrf_token %}
-                            <div class="card2 card border-0 px-4 px-sm-5 py-5"> 
-                                <h3 class="mb-1">Registrar Equipo</h3>
-                                <p class="mb-4 text-sm">Este formulario es para registrar un equipo para el torneo First Assault</p>
+                            <div class="card2 card border-0 px-4 px-sm-5 py-5 ">
+                                <h3 class="mb-3 text-center"  style="color: #512DA8;">Formulario Inscripción al torneo</h3>
+                          
                                 <div class="form-group">
-                                    {{ form.nombre.label_tag }}
-                                    {{ form.nombre }}
+                                    <div class="row align-items-center">
+                                        <label class="col-3 mb-0"><strong>Nombre del equipo</strong></label>
+                                        <div class="col-9">
+                                            {{ form.nombre }}
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="form-group">
-                                    {{ form.logo.label_tag }}
-                                    {{ form.logo }}
+                                    <div class="row align-items-center">
+                                        <label class="col-3 mb-0"><strong>{{ form.logo.label }}</strong></label>
+                                        <div class="col-9">
+                                            {{ form.logo }}
+                                        </div>
+                                    </div>
                                 </div>
-                                <h3 class="mb-1">Participantes</h3>
+                              
                                 <div class="row mt-3" id="participante-form">
                                     {{ formset.management_form }}
                                     {% for form in formset %}
-                                    <div class="col-md-4"> 
-                                        <label class="mb-0">
-                                            <h6 class="mb-0 text-sm">Nombre</h6>
-                                        </label> 
-                                        {{ form.nombre }}
+                                    <div class="col-md-6">
+                                        {% if forloop.first %}
+                                        <h4 class="mb-4" style="color: #512DA8;">Jugador {{ forloop.counter }} - Capitán</h4>
+                                        {% elif forloop.counter == 6 %}
+                                        <h4 class="mb-4" style="color: #512DA8;">Jugador {{ forloop.counter }} - Suplente</h4>
+                                        {% else %}
+                                        <h4 class="mb-4" style="color: #512DA8;">Jugador {{ forloop.counter }} - Jugador</h4>
+                                        {% endif %}
+                                        <div class="form-group">
+                                            <div class="row align-items-center">
+                                                <h5 class="col-5 mb-0"><strong>Nombre completo:</strong></h5>
+                                                <div class="col-7">
+                                                    {{ form.nombre }}
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="row align-items-center">
+                                                <h5 class="col-5 mb-0"><strong>Edad:</strong></h5>
+                                                <div class="col-7">
+                                                    {{ form.edad }}
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="row align-items-center">
+                                                <h5 class="col-5 mb-0"><strong>Nacionalidad:</strong></h5>
+                                                <div class="col-7">
+                                                    {{ form.nacionalidad }}
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="form-group">
+                                            <div class="row align-items-center">
+                                                <h5 class="col-5 mb-0"><strong>Correo Electrónico:</strong></h5>
+                                                <div class="col-7">
+                                                    {{ form.email }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="row align-items-center">
+                                                <h5 class="col-5 mb-0"><strong>Riot ID:</strong></h5>
+                                                <div class="col-7">
+                                                    {{ form.nickname }}
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="row align-items-center">
+                                                <h5 class="col-5 mb-0"><strong>Usuario discord:</strong></h5>
+                                                <div class="col-7">
+                                                    {{ form.discord }}
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="col-md-4"> 
-                                        <label class="mb-0">
-                                            <h6 class="mb-0 text-sm">Correo Electronico</h6>
-                                        </label>
-                                        {{ form.email }}
+                                    {% if forloop.counter|divisibleby:2 %}
+                                    <div class="col-12">
+                                        <hr class="divider my-4">
                                     </div>
-                                    <div class="col-md-3"> 
-                                        <label class="mb-0">
-                                            <h6 class="mb-0 text-sm">Usuario Discord</h6>
-                                        </label> 
-                                        {{ form.nickname }}
-                                    </div>
+                                    {% endif %}
                                     {% endfor %}
                                 </div>
-                                <div class="row mb-4">
-                                    <div class="col-md-6"> 
-                                        <button class="btn btn-blue text-center mb-1 py-2">
-                                            Registrar equipo
-                                        </button> 
+                                
+                                
+                                <div class="row mb-4 justify-content-center">
+                                    <div class="col-md-4">
+                                        <button style="font-size: 22px; font-weight: bold;" class="btn btn-blue text-center mb-1 py-2 ">
+                                            INSCRIBIRSE
+                                        </button>
                                     </div>
-                                    <div class="col-md-4"> 
-                                        <button class="btn btn-azul text-center mb-1 py-2" type="button" id="add-participant">
-                                            Añadir Suplentes
-                                        </button> 
-                                    </div>
+
+                               <!--
+                                <div class="col-md-4">
+                                    <button class="btn btn-azul text-center mb-1 py-2" type="button" id="add-participant">
+                                        Añadir Suplentes
+                                    </button>
                                 </div>
+                                -->
+                                </div>
+                                  <!--
                                 <div class="row px-3 mb-4">
-                                    <div class="line"></div> 
+                                    <div class="line"></div>
                                     <small class="text-muted or text-center">MAE GAMING</small>
                                     <div class="line"></div>
                                 </div>
+                                       -->
                             </div>
                         </form>
+                        
+                        
+                        
             </div>
   
         </div>
@@ -420,7 +497,7 @@ button:focus {
     // Mostrar mensaje de alerta si existe un mensaje flash
     {% if messages %}
         {% for message in messages %}
-            alert('{{ message }}');
+       
         {% endfor %}
     {% endif %}
 </script>

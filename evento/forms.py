@@ -12,19 +12,14 @@ class EquipoForm(forms.ModelForm):
 class ParticipanteForm(forms.ModelForm):
     class Meta:
         model = Participante
-        fields = ['nombre', 'email', 'nickname']
+        fields = ['nombre', 'email', 'nickname', 'discord', 'nacionalidad', 'edad']
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        # Hacer que los campos sean obligatorios
-        self.fields['nombre'].required = True
-        self.fields['email'].required = True
-        self.fields['nickname'].required = True
-
-        # Añadir atributo required a los widgets
-        self.fields['nombre'].widget.attrs.update({'required': 'required'})
-        self.fields['email'].widget.attrs.update({'required': 'required'})
-        self.fields['nickname'].widget.attrs.update({'required': 'required'})
+        # Hacer que los campos no sean requeridos inicialmente
+        for field_name, field in self.fields.items():
+            field.required = False
+            field.widget.attrs.update({'required': ''})  # Eliminar el atributo required si se añadió
 
 # Configuración del FormSet para Participante utilizando el formulario personalizado
 ParticipanteFormSet = inlineformset_factory(

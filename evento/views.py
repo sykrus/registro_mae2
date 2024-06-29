@@ -12,6 +12,10 @@ def index(request):
 def bienvenido(request):
     return render(request, 'evento/bienvenido.html')
 
+from django.shortcuts import render, redirect
+from django.contrib import messages
+from .forms import EquipoForm, ParticipanteFormSet
+
 def equipo_create(request):
     if request.method == 'POST':
         form = EquipoForm(request.POST, request.FILES)
@@ -28,5 +32,11 @@ def equipo_create(request):
     else:
         form = EquipoForm()
         formset = ParticipanteFormSet(queryset=Participante.objects.none())
-        formset.extra = 5
+        
+        # Configurar el sexto formulario adicional para que no sea requerido
+        if formset.total_form_count() > 1:
+            formset.forms[1].empty_permitted = True
+        
+        formset.extra = 6
+    
     return render(request, 'evento/equipo_form.html', {'form': form, 'formset': formset})
